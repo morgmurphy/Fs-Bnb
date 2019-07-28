@@ -73,7 +73,28 @@ export class BookingsPage implements OnInit {
   }
 
   accept() {
+    const editBooking = {
+      status: "accept",
+      date_from: this.date_from,
+      date_to: this.date_to,
+      listing_id: this.listing_id,
+      user_id: this.user_id,
 
+  
+    }
+    this.bookingsService.updateBookingById(this.listingId, editBooking).then(res => {
+  
+      const testId = localStorage.getItem('listingId');
+      console.log(testId)
+  
+      this.NavCtrl.navigateForward('existing', {
+        queryParams: {
+          user: res
+        }
+      });
+    }).catch(err => {
+      this.presentAlert(err);
+    });
   }
   async presentAlert(err) {
     const alert = await this.alertCtrl.create({
