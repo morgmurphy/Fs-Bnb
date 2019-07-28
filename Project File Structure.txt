@@ -1,15 +1,24 @@
 | PROJECT             | COMPONENT          | FILE NAMES                                                                                                                                                                              |
 |---------------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Consumer mobile app | Login              | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\login & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\login               |
-| Consumer mobile app | Registration       | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\registration & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\registration |
-| Consumer mobile app | User Profile       | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\user & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\user                 |
-| Consumer mobile app | List of Properties | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\properties & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\properties     |
-| Provider mobile app | Login              | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\login & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\login               |
-| Provider mobile app | Registration       | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\registration & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\registration |
-| Provider mobile app | User Profile       | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\user & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\user                 |
-| Provider mobile app | List of Properties | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\properties & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\properties     |
-| Provider mobile app | List of Bookings   | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\bookings & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\bookings         |
-| Admin Panel         | Users              | eg. Rubric-file-structure\admin-panel\admin-panel\src\app\components\users & eg. Rubric-file-structure\admin-panel\admin-panel\src\app\services\users                                   |
-| Admin Panel         | Bookings           | eg. Rubric-file-structure\admin-panel\admin-panel\src\pages\bookings & eg. Rubric-file-structure\admin-panel\admin-panel\src\src\app\services\bookings                                  |
-| API                 | Users              | eg. Rubric-file-structure\API\api\src\pages\users & eg. Rubric-file-structure\api\api\provider-mobile-app\src\api\users                                                                 |
-| API                 | Bookings           | eg. Rubric-file-structure\API\api\src\pages\bookings & eg. Rubric-file-structure\api\api\provider-mobile-app\src\api\bookings                                                           |
+| Consumer mobile app | Login              | fs-Bnb\consumer-mobile-app\src\app\home 
+| Consumer mobile app | Registration       | fs-Bnb\consumer-mobile-app\src\app\registration|
+| Consumer mobile app | User Profile       | fs-Bnb\consumer-mobile-app\src\app\profile                 |
+| Consumer mobile app | List of Properties | fs-Bnb\consumer-mobile-app\src\app\explore
+| Consumer mobile app | Property Detail    | fs-Bnb\consumer-mobile-app\src\app\details                 |
+| Consumer mobile app | Booking            | fs-Bnb\consumer-mobile-app\src\app\book
+| Provider mobile app | Login              | fs-Bnb\provider-mobile-app\src\app\home                     |
+| Provider mobile app | Registration       | fs-Bnb\provider-mobile-app\src\app\registration             |
+| Provider mobile app | User Profile       | fs-Bnb\provider-mobile-app\src\app\profile                 |
+| Provider mobile app | List of Properties | fs-Bnb\provider-mobile-app\src\app\existing                 |
+| Provider mobile app | List of Bookings   | fs-Bnb\provider-mobile-app\src\app\bookings                 |
+| Provider mobile app | Create Listing     | fs-Bnb\provider-mobile-app\src\app\new                       |
+| Provider mobile app | Update Listings    | fs-Bnb\provider-mobile-app\src\app\update-rental                 |
+| Provider mobile app | Delete Rental      | fs-Bnb\provider-mobile-app\src\app\update-rental                 |
+| Admin Panel         | Users              | fs-Bnb\admin-panel\src\app\components\user     |                         
+| Admin Panel         | Providers          | fs-Bnb\admin-panel\src\app\components\service-provider         |
+| Admin Panel         | Listings           | fs-Bnb\admin-panel\src\app\components\listings     |
+| Admin Panel         | Bookings           | fs-Bnb\admin-panel\src\app\components\bookings   |
+| API                 | Users              | fs-bnb\API\src\api\user-routes.js & fs-bnb\API\src\api\auth-routes.js & fs-bnb\API\src\services\auth-service.js & fs-bnb\API\src\services\user-service.js & fs-bnb\API\src\models\user-model.js  
+| API                 | Providers          | fs-bnb\API\src\api\provider-routes.js & fs-bnb\API\src\models\provider-model.js 
+| API                 | Listings           | fs-bnb\API\src\api\listings-routes.js & fs-bnb\API\src\models\listing-model.js & fs-bnb\API\src\models\listing-imgurl-mapping.js & fs-bnb\API\src\services\listing-service.js
+| API                 | Bookings           | fs-bnb\API\src\api\booking-routes.js & fs-bnb\API\src\models\booking-model.js & fs-bnb\API\src\services\booking-service.js|
