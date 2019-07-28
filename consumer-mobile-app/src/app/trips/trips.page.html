@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Upcoming Travel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div *ngFor="trips.length == 0"> 
+    <ion-card>
+      Note that you have no upcoming trips. <br>
+      <ion-button (click)="navToExplore()">Explore Airbnb</ion-button>
+    </ion-card>
+  </div> -->
+
+  <!-- <div *ngFor="trips.length > 0"></div> -->
+  <div class = "ion-padding" align = "center">
+    <ion-card *ngFor="let booking of bookings">
+      <!-- <ion-slides pager = "true">
+          <ion-slide *ngFor = "let img of listing.imgUrl">
+              <img src="{{img}}" />
+          </ion-slide>
+        </ion-slides> -->
+          <ion-card-subtitle>{{booking.location}}</ion-card-subtitle> <br>
+          <ion-card-title>{{booking.name}}</ion-card-title><br>
+          <ion-card-subtitle>{{booking.price}}</ion-card-subtitle><br>
+    </ion-card>
+  </div>
+
+
+  <ion-button class="btn btn-primary" (click)="showHideListings()">Show/Hide Listings</ion-button>
+  <br>
+  <ion-button (click)="navToInbox()"> Inbox</ion-button>
+  <ion-button (click)="navToProfile()"> Profile</ion-button>
+  <ion-button (click)="navToExplore()"> Explore</ion-button>
+
+</ion-content>
+
+
+
+<!-- <h1>Trips</h1>
+    <p><b>No Upcoming trips</b></p>
+    <p>Start exploring ideas for your next trip</p>
+    <ion-button (click)="navToExplore()"> Explore Airbnb</ion-button>
+    <ion-list *ngIf = "isClicked">
+        <ion-item *ngFor = "let item of listings">
+          <div>{{item.name}}</div>
+          <div>{{item.location}}</div>
+          <div>{{item.price}}</div>
+        </ion-item>
+    </ion-list>
+    <input [(ngModel)] = "email">  -->
+
+<!-- <div *ngIf="showListings">
+    <ion-card *ngFor="let listing of listings">
+      <img src="{{listing.imgUrl}}" />
+      <ion-card-header>
+        <ion-card-subtitle>{{listing.location}}</ion-card-subtitle>
+        <ion-card-title>{{listing.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        This can be a description of the listing
+      </ion-card-content>
+    </ion-card>
+  </div> -->
