@@ -87,6 +87,22 @@ module.exports = class User {
   });
   };
 
+  updateStatus(bookingId, booking) {
+    return new Promise((resolve, reject) => {
+        mysqlConn.query(
+            "UPDATE bookings SET status = ? WHERE id = ? ",
+            [booking.status, bookingId],
+            function (err, res) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(res);
+                }
+            }
+        );
+    });
+  }
+
   // getByListingId(listingId) {
   //   return new Promise((resolve, reject) => {
   //     mysqlConn.query("Select * from booking WHERE listingId in (select id FROM listing);", listingId, function (
