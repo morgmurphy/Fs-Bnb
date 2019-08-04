@@ -47,49 +47,55 @@ export class BookingsPage implements OnInit {
     this.NavCtrl.navigateForward("profile");
   }
 
-  // reject() {
-  //   const editBooking = {
-  //     status: "reject",
-  //     date_from: this.date_from,
-  //     date_to: this.date_to,
-  //     listing_id: this.listing_id,
-  //     user_id: this.user_id,
+  reject() {
+    const editBooking = {
+      status: "reject",
+      date_from: this.date_from,
+      date_to: this.date_to,
+      listing_id: this.listing_id,
+      user_id: this.user_id,
 
   
-  //   }
-  //   this.bookingsService.updateBookingById(this.listingId, editBooking).then(res => {
+    }
+    this.bookingsService.updateBookingById(this.listingId, editBooking).then(res => {
   
-  //     const testId = localStorage.getItem('listingId');
-  //     console.log(testId)
+      const testId = localStorage.getItem('listingId');
+      console.log(testId)
   
-  //     this.NavCtrl.navigateForward('existing', {
-  //       queryParams: {
-  //         user: res
-  //       }
-  //     });
-  //   }).catch(err => {
-  //     this.presentAlert(err);
-  //   });
-  // }
-
-  // accept() {
-
-  // }
-
-  accept(id) {
-    this.bookingsService.updateStatusById(id, 'accepted').then(response => {
-      this.NavCtrl.navigateRoot('existing-rentals');
+      this.NavCtrl.navigateForward('existing', {
+        queryParams: {
+          user: res
+        }
+      });
     }).catch(err => {
-      alert(err);
-    })
+      this.presentAlert(err);
+    });
   }
 
-  reject(id) {
-    this.bookingsService.updateStatusById(id, 'rejected').then(response => {
-      this.NavCtrl.navigateRoot('existing-rentals');
+
+  accept() {
+    const editBooking = {
+      status: "accept",
+      date_from: this.date_from,
+      date_to: this.date_to,
+      listing_id: this.listing_id,
+      user_id: this.user_id,
+
+  
+    }
+    this.bookingsService.updateBookingById(this.listingId, editBooking).then(res => {
+  
+      const testId = localStorage.getItem('listingId');
+      console.log(testId)
+  
+      this.NavCtrl.navigateForward('existing', {
+        queryParams: {
+          user: res
+        }
+      });
     }).catch(err => {
-      alert(err);
-    })
+      this.presentAlert(err);
+    });
   }
   async presentAlert(err) {
     const alert = await this.alertCtrl.create({
