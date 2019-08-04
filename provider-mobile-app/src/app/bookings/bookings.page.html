@@ -13,8 +13,8 @@
           Date from: {{booking.date_from}} <br>
           Date to: {{booking.date_to}}<br>
           Booking Status: {{booking.status}} <br>
-          <ion-button (click)="reject()"> Reject Booking Request</ion-button>
-          <ion-button (click)="accept()"> Accept Booking Request</ion-button>
+          <ion-button (click)="reject(booking.Id)"> Reject Booking Request</ion-button>
+          <ion-button (click)="accept(booking.Id)"> Accept Booking Request</ion-button>
         </ion-card>
       </div>
 </ion-content>

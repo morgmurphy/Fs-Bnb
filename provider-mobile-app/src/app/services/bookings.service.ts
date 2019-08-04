@@ -98,6 +98,22 @@ export class BookingsService {
     })
   }
 
+  updateStatusById(id, status:any) {
+    return new Promise((resolve, reject) => {
+      this.httpClient
+      .post(`http://localhost:5000/api/bookings/updateStatus/${id}`, {"status":status})
+      .subscribe(
+        (response: Booking[]) => {
+          resolve(response);
+        },
+        (err) => {
+          console.log(err);
+          reject(err)
+        }
+      )
+    })
+  }
+
   setBookingId(id) {
     this.bookingId = id;
   }
